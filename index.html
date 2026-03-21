@@ -141,11 +141,63 @@
   @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
   .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
   .reveal.visible{opacity:1;transform:none}
+  @media(hover:none){
+    body{cursor:auto}
+    .cursor,.cursor-ring{display:none}
+  }
   @media(max-width:900px){
-    nav{padding:20px 24px}.container{padding:0 24px}
-    .about-grid,.contact-inner{grid-template-columns:1fr;gap:48px}
-    .project-card.wide,.project-card.half,.project-card.narrow{grid-column:span 12}
+    body{cursor:auto}
+    .cursor,.cursor-ring{display:none}
+    nav{padding:16px 20px}
+    .nav-links{gap:20px}
+    .nav-links a{font-size:10px;letter-spacing:.08em}
+    .container{padding:0 20px}
+    .hero{padding-bottom:60px;padding-top:100px;min-height:auto}
     .hero-bg-text,.hero-scroll{display:none}
+    .hero-label{font-size:10px;letter-spacing:.15em;margin-bottom:20px}
+    .hero-name{font-size:clamp(44px,12vw,80px);margin-bottom:24px}
+    .hero-desc{font-size:16px;margin-bottom:36px}
+    .hero-ctas{gap:12px}
+    .btn{padding:12px 20px;font-size:10px}
+    section{padding:72px 0}
+    .section-header{margin-bottom:40px}
+    .section-title{font-size:clamp(28px,7vw,48px)}
+    .about-grid{grid-template-columns:1fr;gap:40px}
+    .about-text p{font-size:15px}
+    .about-stats{grid-template-columns:1fr 1fr}
+    .stat-num{font-size:40px}
+    .stat-card{padding:20px}
+    .project-card.wide,.project-card.half,.project-card.narrow{grid-column:span 12}
+    .project-card{padding:24px}
+    .project-name{font-size:24px}
+    .contact-inner{grid-template-columns:1fr;gap:40px}
+    .contact-left h2{font-size:clamp(32px,8vw,56px)}
+    .contact-item{padding:14px 16px}
+    .contact-item-value{font-size:12px;word-break:break-all}
+    .contact-card{padding:28px}
+    .contact-card h3{font-size:26px}
+    .footer-inner{flex-direction:column;gap:12px;text-align:center}
+  }
+  @media(max-width:480px){
+    nav{padding:14px 16px}
+    .nav-links{gap:14px}
+    .container{padding:0 16px}
+    .hero{padding-top:80px;padding-bottom:48px}
+    .hero-name{font-size:clamp(36px,11vw,56px)}
+    .hero-desc{font-size:15px;margin-bottom:28px}
+    .hero-ctas{flex-direction:column}
+    .btn{justify-content:center;padding:14px 20px}
+    section{padding:56px 0}
+    .section-header{margin-bottom:32px;gap:12px}
+    .about-stats{grid-template-columns:1fr}
+    .stat-card{padding:18px}
+    .stat-num{font-size:36px}
+    .project-card{padding:20px}
+    .project-name{font-size:22px}
+    .project-desc{font-size:13px}
+    .contact-item{flex-direction:column;align-items:flex-start;gap:4px}
+    .contact-item-value{font-size:11px}
+    .contact-card{padding:24px}
   }
 </style>
 </head>
